@@ -73,7 +73,7 @@ Creates an event object.
 - (object) An event object with properties `name` and `date`.
 
 
-##Example code:
+## Sample code:
 ```js
 const festival = require("./Nichelle_FestivalFlow.js");
 const createEvent = festival.createEvent;
