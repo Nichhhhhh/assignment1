@@ -1,25 +1,86 @@
-# Assignment 1
+# Event Flow for Festivals
 
-You will only need one file, ie, your node module, for this assignment.
+## Description:
+This module allows the user to create a flow for their festivals. They are able to input the name of the festival, as well as add, remove, and edit the events and their dates. Below are  the functions created in the module and an example of how to use them.
 
-In this readme file, describe how to use your node module. It could be similar to **app.js** from Lab2, where you call some functions in your node module and display the output. Describe how to setup your node module, if any. Describe how to call the functions, what parameters required and so on.
+## Functions created:
+### setName
+Sets the name of the festival.
 
-You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live preview of the readme file.
+**Parameter:**
+- `n` (string): The name of the festival.
 
-For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+### getName
+Gets the name of the festival.
 
-setName manage the name of the festival.
-setLocation and getLocation manage the festival's location.
-removeEvent removes an event by its name.
-updateEvent updates an existing event with new details.
-clearEvents removes all events from the festival.
+**Returns:**
+- (string) The name of the festival.
 
-const festival = require('./festival');
+### setLocation
+Sets the location of the festival.
+
+**Parameter:**
+- `loc` (string): The location of the festival.
+
+### getLocation
+Gets the location of the festival.
+
+**Returns:**
+- (string) The location of the festival.
+
+### addEvent
+Adds an event to the festival.
+
+**Parameter:**
+- `event` (object): The event to add. It should have the properties `name` (string) and `date` (string).
+
+### removeEvent
+Removes an event by its name.
+
+**Parameter:**
+- `eventName` (string): The name of the event to remove.
+
+### updateEvent
+Updates an existing event with new details.
+
+**Parameters:**
+- `eventName` (string): The name of the event to update.
+- `newEvent` (object): The new event details. It should have the properties `name` (string) and `date` (string).
+
+### updateEvents
+Updates multiple events based on a list of updates.
+
+**Parameter:**
+- `eventUpdates` (array of objects): An array of update objects. Each object should have the following properties:
+  - `oldName` (string): The name of the event to update.
+  - `newName` (string): The new name for the event.
+  - `newDate` (string): The new date for the event.
+
+### clearEvents
+Clears all events from the festival.
+
+### listEvents
+Lists all events in the festival.
+
+### createEvent
+Creates an event object.
+
+**Parameters:**
+- `name` (string): The name of the event.
+- `date` (string): The date of the event.
+
+**Returns:**
+- (object) An event object with properties `name` and `date`.
+
+
+## Sample code:
+```js
+const festival = require("./Nichelle_FestivalFlow.js");
 const createEvent = festival.createEvent;
 
 //Set festival name
 festival.setName('Summer Music Fest');
-console.log(`Festival Name: ${festival.getName()}`);
+console.log("Festival Name: ${festival.getName()}");
 
 //Create festival events
 const event1 = createEvent('Opening Ceremony, Pop Concert', '2024-06-01');
@@ -37,3 +98,19 @@ festival.listEvents();
 // Update an event
 const updatedEvent = createEvent('Opening Ceremony, Grand Concert', '2024-06-01');
 festival.updateEvent('Opening Ceremony, Pop Concert', updatedEvent);
+
+//List all events
+festival.listEvents();
+
+// Remove an event
+festival.removeEvent('Opening Ceremony, Grand Concert');
+
+// List all events again to see the removal
+festival.listEvents();
+
+// Clear all events
+festival.clearEvents();
+
+// List all events to confirm they are cleared
+festival.listEvents();
+```
