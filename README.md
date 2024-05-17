@@ -13,7 +13,8 @@ This module allows the user to create a flow for their festivals. They are able 
 **updateEvent** updates an existing event with new details.
 
 **clearEvents** removes all events from the festival.
-```
+
+```js
 const festival = require("./Nichelle_FestivalFlow.js");
 const createEvent = festival.createEvent;
 
