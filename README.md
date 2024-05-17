@@ -1,7 +1,7 @@
 # Event Flow for Festivals
 
 ## Description:
-This module allows the user to create a flow for their festivals. They are able to input the name of the festival, as well as add, remove, and edit the events and their dates. Below is an example of how to use the module.
+This module allows the user to create a flow for their festivals. They are able to input the name of the festival, as well as add, remove, and edit the events and their dates. Below are  the functions created in the module and an example of how to use them.
 
 ## Functions created:
 ### setName
@@ -73,6 +73,7 @@ Creates an event object.
 - (object) An event object with properties `name` and `date`.
 
 
+##Example code:
 ```js
 const festival = require("./Nichelle_FestivalFlow.js");
 const createEvent = festival.createEvent;
