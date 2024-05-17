@@ -9,7 +9,7 @@ This module allows the user to create a flow for their festivals. They are able 
 **removeEvent** removes an event by its name.
 **updateEvent** updates an existing event with new details.
 **clearEvents** removes all events from the festival.
-
+```
 const festival = require('./festival');
 const createEvent = festival.createEvent;
 
@@ -48,3 +48,4 @@ festival.clearEvents();
 
 // List all events to confirm they are cleared
 festival.listEvents();
+```
