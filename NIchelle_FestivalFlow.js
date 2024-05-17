@@ -25,7 +25,7 @@ module.exports = {
     },
 
     removeEvent(eventName) {
-        const index = this.events.findIndex(event => event.name === eventName);
+        const index = this.events.findIndex(event => event.name.toLowerCase() === eventName.toLowerCase());
         if (index !== -1) {
             this.events.splice(index, 1);
             console.log(`Event "${eventName}" removed from the festival.`);
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     updateEvent(eventName, newEvent) {
-        const index = this.events.findIndex(event => event.name === eventName);
+        const index = this.events.findIndex(event => event.name.toLowerCase() === eventName.toLowerCase());
         if (index !== -1) {
             this.events[index] = newEvent;
             console.log(`Event "${eventName}" updated.`);
