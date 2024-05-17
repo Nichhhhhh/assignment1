@@ -98,19 +98,3 @@ festival.listEvents();
 // Update an event
 const updatedEvent = createEvent('Opening Ceremony, Grand Concert', '2024-06-01');
 festival.updateEvent('Opening Ceremony, Pop Concert', updatedEvent);
-
-//List all events
-festival.listEvents();
-
-// Remove an event
-festival.removeEvent('Opening Ceremony, Grand Concert');
-
-// List all events again to see the removal
-festival.listEvents();
-
-// Clear all events
-festival.clearEvents();
-
-// List all events to confirm they are cleared
-festival.listEvents();
-```
