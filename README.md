@@ -4,7 +4,7 @@
 This module allows the user to create a flow for their festivals. They are able to input the name of the festival, as well as add, remove, and edit the events and their dates. Below is an example of how to use the module.
 
 ## Functions created:
-**setName** manage the name of the festival.
+`**setName** manage the name of the festival.`
 **setLocation** and **getLocation** manage the festival's location.
 **removeEvent** removes an event by its name.
 **updateEvent** updates an existing event with new details.
